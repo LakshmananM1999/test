@@ -1,0 +1,34 @@
+GitHub
+
+git init - to start a git repo
+git status - to see the status of repo
+git add. - add all the files in the repo
+git commit -m " " - comitting a file into git with message
+git restore --staged {filename} - restore the status of the repo before adding any files
+git log - see the history of commits
+git reset {hash obtained from git log} - restore the version with the following hash
+git stash - used to keep the file behind the working tree(unstaged) and it is took whenever needed
+git stash pop - used to bring back the files from the unstaged area
+git stash clear - used to clear the files in the unstaged area
+git remote add origin {gitURl} - add the git url of your repo present in your account
+git push origin {branchName} - to push the code to the origin
+Note: Here the changes made (Pull request) can be merged in the github ui
+git push origin {branchName} -f - to force push the code into the branch
+
+Fork option is used to get a copy of the project in your git account in which projects you dont have access to
+
+git clone {url} - to clone the project from your account(the url can be fetched from the the code button option)
+git remote add upstream {url} - here we can add the upstream url(the url of others project where we can do changes and raise a pull request)
+git remote -v - to see the urls present in the local repo
+git branch {branch name} - create a new branch
+Note: whenever creating a new branch make sure the main branch is up-to-date
+
+git checkout {branch name} - go into the new branch
+git fetch --all --prune - to get all the committs that have not been updated in the main branch which has forked other project that has all the changes up-to-date
+git reset --hard upstream/main - (here main is the main branch of the forked project(upstream url)) used to reset the project with all the commits that has been made in the forked project
+Note: when we reset the branch we have to push the changes with git push origin {branch name}
+
+git pull upstream main - (here the branch is main) here all the commits are pulled from the main branch
+Note: when we have pulled all the commits from the upstream url we have to push with git push origin main
+
+git rebase -i {hashkey of the commit before all the commits that have to be squashed} - squash all the commits into single commit
