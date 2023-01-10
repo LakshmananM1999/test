@@ -1,4 +1,4 @@
-GitHub
+GitHub 
 
 git init - to start a git repo
 git status - to see the status of repo
